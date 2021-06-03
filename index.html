@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Datetime superapp</title>
+        <script src="./src/main.js" type="module"></script>
+    </head>
+<body>
+
+        <form id="datecalc">
+            <h3>Калькулятор дат</h3>
+            <label>
+                <strong>Первая дата:</strong>
+                <input type="date" name="firstDate" />
+            </label>
+            <label>
+                <strong>Вторая дата:</strong>
+                <input type="date" name="secondDate" />
+            </label>
+            <button type="submit">Расчитать промежуток</button>
+            <p id="datecalc__result"></p>
+        </form>
+
+    
+   
+    <br></br>
+<h1 class = "myclass">0</h1>
+<button id="Start">СТАРТ</button>
+<button id="Stop">СТОП</button>
+<script>
+var el = document.querySelector(".myclass");
+
+
+var start = document.getElementById('Start');
+  addEventListener("click", function() {
+    var tik = 0;
+    const intervalId = setInterval(() => {
+    el.innerHTML = tik;
+  tik ++;
+  
+  }, 1000);
+  var stop = document.getElementById('Stop');
+  addEventListener("click", function() {
+    
+    setTimeout(() => { clearInterval(intervalId); });
+
+});
+  });
+
+</script>
+</body>
+</html>
