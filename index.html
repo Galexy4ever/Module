@@ -28,12 +28,13 @@
 <h1 class = "myclass">0</h1>
 <button id="Start">СТАРТ</button>
 <button id="Stop">СТОП</button>
+<input type="number" id="time" />
 <script>
 var el = document.querySelector(".myclass");
 
 
 var start = document.getElementById('Start');
-  addEventListener("click", function() {
+  start.addEventListener("click", function() {
     var tik = 0;
     const intervalId = setInterval(() => {
     el.innerHTML = tik;
@@ -41,13 +42,16 @@ var start = document.getElementById('Start');
   
   }, 1000);
   var stop = document.getElementById('Stop');
-  addEventListener("click", function() {
+  stop.addEventListener("click", function() {
     
     setTimeout(() => { clearInterval(intervalId); });
 
 });
+ let timer = document.getElementById('time')
+ time.eventTarget.addEventListener('');
+ console.log(timer)
   });
-
+console.log(timer)
 </script>
 </body>
 </html>
