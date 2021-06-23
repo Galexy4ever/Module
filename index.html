@@ -1,9 +1,11 @@
+  
 <!DOCTYPE html>
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Datetime superapp</title>
+        <link rel="shortcut icon" href="#"/>
         <script src="./src/main.js" type="module"></script>
     </head>
 <body>
@@ -26,32 +28,48 @@
    
     <br></br>
 <h1 class = "myclass">0</h1>
+<label>
+    <strong>Ведите время в секундах</strong>
+    <input id = "time" type ="number" name="time" />
+</label>
 <button id="Start">СТАРТ</button>
-<button id="Stop">СТОП</button>
-<input type="number" id="time" />
+<button id="Stop">СТОП</button> <br>
+
 <script>
-var el = document.querySelector(".myclass");
-
-
-var start = document.getElementById('Start');
-  start.addEventListener("click", function() {
-    var tik = 0;
-    const intervalId = setInterval(() => {
-    el.innerHTML = tik;
-  tik ++;
   
-  }, 1000);
-  var stop = document.getElementById('Stop');
-  stop.addEventListener("click", function() {
-    
-    setTimeout(() => { clearInterval(intervalId); });
+// let el = document.querySelector(".myclass");
+// let start = document.getElementById('Start');
+// let stop = document.getElementById('Stop');
+// let val = document.getElementById('time');
 
-});
- let timer = document.getElementById('time')
- time.eventTarget.addEventListener('');
- console.log(timer)
-  });
-console.log(timer)
+   
+// start.addEventListener("click", () => {
+//     let tik = 0;
+
+//     let intervalId = setTimeout(function tick() {
+//         if (val.value > tik) {
+//             el.innerHTML = tik;
+//             tik ++;
+//             intervalId = setTimeout(tick, 1000);
+//            if (val.value <= (tik+5)) {
+//             new Audio('./src/beep.mp3').play()
+//            } 
+           
+//         } else {   
+//             clearInterval(intervalId);
+//             console.log(tik);
+//             el.innerHTML =  `<p>время вышло</p>`;
+
+//         }
+//     }, 1000);
+
+//     stop.addEventListener("click", () => {
+//         clearInterval(intervalId);
+//         console.log(tik);
+//         el.innerHTML = tik; 
+//     });
+// });
+
 </script>
 </body>
 </html>

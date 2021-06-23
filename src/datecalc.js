@@ -1,4 +1,6 @@
-import { DateTime } from "https://moment.github.io/luxon/es6/luxon.js"; // 1
+  
+  
+import { DateTime } from "./luxor.js"; // 1
 
 export function diffDates(firstDate, secondDate) {
     firstDate = DateTime.fromISO(firstDate);
